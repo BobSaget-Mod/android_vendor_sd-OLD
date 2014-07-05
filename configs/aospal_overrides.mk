@@ -23,9 +23,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.adb.secure=1
 
-# Remix Packages
+# Extra packages
 PRODUCT_PACKAGES += \
-    Trebuchet \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
@@ -34,4 +33,4 @@ PRODUCT_PACKAGES += \
 
 # Kernel modules support
 PRODUCT_COPY_FILES += \
-    vendor/psd/prebuilt/etc/init.d/999Sync:system/etc/init.d/999Sync
+    vendor/aospal/prebuilt/etc/init.d/999Sync:system/etc/init.d/999Sync
