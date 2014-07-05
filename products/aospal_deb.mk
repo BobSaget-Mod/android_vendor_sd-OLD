@@ -1,4 +1,4 @@
-ifeq (psd_deb,$(TARGET_PRODUCT))
+ifeq (aospal_deb,$(TARGET_PRODUCT))
 # Use 4.9.x for the kernel
 GCC_VERSION_ARM := 4.9
 # Override ARM settings
@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-include vendor/psd/configs/psd_modular.mk
+include vendor/aospal/configs/aospal_modular.mk
 
 #Disable strict aliasing modules
 DISABLE_STRICT_WEBKIT := \
@@ -47,8 +47,8 @@ ENABLE_GRAPHITE := true
 # Saber linux toolchains
 USING_SABER_LINUX := yes
 
-# Include Paranoid SaberDroid common configuration
-include vendor/psd/main.mk
+# Include AOSPAL common configuration
+include vendor/aospal/main.mk
 
 # Call pa device
 $(call inherit-product, vendor/pa/products/pa_deb.mk)
@@ -57,7 +57,7 @@ $(call inherit-product, vendor/pa/products/pa_deb.mk)
 $(call inherit-product, device/asus/deb/full_deb.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := psd_deb
+PRODUCT_NAME := aospal_deb
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := Asus
