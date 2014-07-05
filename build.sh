@@ -19,7 +19,7 @@
 DEVICE="$1"
  
 # start
-   echo -e "Building AOSPAL 'AOSPSM' for $DEVICE";
+   echo -e "Building SaberDroid for $DEVICE";
    echo -e "";
    echo -e ""
  
@@ -81,9 +81,9 @@ DEVICE="$1"
          2) deodex"
       read n
          case $n in
-            1) lunch aospal_$DEVICE-user
+            1) lunch sd_$DEVICE-user
                ;;
-            2) lunch aospal_$DEVICE-userdebug
+            2) lunch sd_$DEVICE-userdebug
                ;;
             *) invalid option
                ;;
@@ -99,13 +99,13 @@ DEVICE="$1"
          4) -j32"
       read n
          case $n in
-            1) make -j4 bacon 2>&1 | tee build-logs/aospal_$DEVICE.txt
+            1) make -j4 bacon 2>&1 | tee build-logs/sd_$DEVICE.txt
                ;;
-            2) make -j8 bacon 2>&1 | tee build-logs/aospal_$DEVICE.txt
+            2) make -j8 bacon 2>&1 | tee build-logs/sd_$DEVICE.txt
                ;;
-            3) make -j18 bacon 2>&1 | tee build-logs/aospal_$DEVICE.txt
+            3) make -j18 bacon 2>&1 | tee build-logs/sd_$DEVICE.txt
                ;;
-            4) make -j32 bacon 2>&1 | tee build-logs/aospal_$DEVICE.txt
+            4) make -j32 bacon 2>&1 | tee build-logs/sd_$DEVICE.txt
                ;;
             *) invalid option
                ;;
