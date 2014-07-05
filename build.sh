@@ -3,9 +3,6 @@
 #
 # Created by Michael S Corigliano for Team AOSPAL (michael.s.corigliano@gmail.com)
 #
-# Parts of the original AOSPA build script have also been implemented in this script,
-# it can be found here: https://www.github.com/AOSPA/android_vendor_pa/build.sh
-#
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
