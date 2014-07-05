@@ -1,4 +1,4 @@
-ifeq (psd_hammerhead,$(TARGET_PRODUCT))
+ifeq (aospal_hammerhead,$(TARGET_PRODUCT))
 # Use 4.10.x for the kernel
 GCC_VERSION_ARM := 4.9
 # Override ARM settings
@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-include vendor/psd/configs/psd_modular.mk
+include vendor/aospal/configs/aospal_modular.mk
 
 # qcom
 DISABLE_STRICT_QCOM := \
@@ -40,8 +40,8 @@ NO_ERROR_UP := \
 	libmemalloc \
 	hwcomposer.msm8974
 
-# Include Paranoid SaberDroid common configuration
-include vendor/psd/main.mk
+# Include AOSPAL common configuration
+include vendor/aospal/main.mk
 
 # Optimize memory
 OPT_MEMORY := true
@@ -57,17 +57,17 @@ MAKE_STRICT_GLOBAL := true
 
 # Loading modules are sometimes needed for bug fixes in the kernel, but we need to load them with ROM scripts
 PRODUCT_COPY_FILES += \
-	vendor/psd/prebuilt/device/hammerhead/etc/init.d/88LoadMod:system/etc/init.d/88LoadMod \
-	vendor/psd/prebuilt/device/hammerhead/etc/init.d/89InsMod:system/etc/init.d/89InsMod
+	vendor/aospal/prebuilt/device/hammerhead/etc/init.d/88LoadMod:system/etc/init.d/88LoadMod \
+	vendor/aospal/prebuilt/device/hammerhead/etc/init.d/89InsMod:system/etc/init.d/89InsMod
 
-# Call pa device
-$(call inherit-product, vendor/pa/products/pa_hammerhead.mk)
+# Call AOSPAL device
+$(call inherit-product, vendor/aospal/products/aospal_hammerhead.mk)
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := psd_hammerhead
+PRODUCT_NAME := aospal_hammerhead
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE
