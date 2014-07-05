@@ -1,5 +1,6 @@
 # Copyright (C) 2013 ParanoidAndroid Project
-# Adapted for AOSPAL
+#
+# Adapted for SaberDroid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (aospal_flo,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/aospal_flo.mk
+ifeq (sd_flo,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_flo.mk
 endif
-ifeq (aospal_grouper,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/aospal_grouper.mk
+ifeq (sd_grouper,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_grouper.mk
 endif
-ifeq (aospal_hammerhead,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/aospal_hammerhead.mk
+ifeq (sd_hammerhead,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_hammerhead.mk
 endif
-ifeq (aospal_mako,$(TARGET_PRODUCT))
-    PRODUCT_MAKEFILES += $(LOCAL_DIR)/aospal_mako.mk
+ifeq (sd_mako,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_mako.mk
 endif
