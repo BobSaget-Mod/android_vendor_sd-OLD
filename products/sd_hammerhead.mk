@@ -1,6 +1,6 @@
-ifeq (aospal_hammerhead,$(TARGET_PRODUCT))
+ifeq (sd_hammerhead,$(TARGET_PRODUCT))
 # Use 4.10.x for the kernel
-GCC_VERSION_ARM := 4.9
+GCC_VERSION_ARM := 4.10
 # Override ARM settings
 SM_ARM_PATH := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/arm-eabi-$(GCC_VERSION_ARM)
 SM_ARM := $(shell $(SM_ARM_PATH)/bin/arm-eabi-gcc --version)
@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sm.arm=$(SM_ARM_VERSION)
 endif
 
-include vendor/aospal/configs/aospal_modular.mk
+include vendor/sd/configs/sd_modular.mk
 
 # qcom
 DISABLE_STRICT_QCOM := \
@@ -40,8 +40,8 @@ NO_ERROR_UP := \
 	libmemalloc \
 	hwcomposer.msm8974
 
-# Include AOSPAL common configuration
-include vendor/aospal/main.mk
+# Include SaberDroid common configuration
+include vendor/sd/main.mk
 
 # Optimize memory
 OPT_MEMORY := true
@@ -57,17 +57,17 @@ MAKE_STRICT_GLOBAL := true
 
 # Loading modules are sometimes needed for bug fixes in the kernel, but we need to load them with ROM scripts
 PRODUCT_COPY_FILES += \
-	vendor/aospal/prebuilt/device/hammerhead/etc/init.d/88LoadMod:system/etc/init.d/88LoadMod \
-	vendor/aospal/prebuilt/device/hammerhead/etc/init.d/89InsMod:system/etc/init.d/89InsMod
+	vendor/sd/prebuilt/device/hammerhead/etc/init.d/88LoadMod:system/etc/init.d/88LoadMod \
+	vendor/sd/prebuilt/device/hammerhead/etc/init.d/89InsMod:system/etc/init.d/89InsMod
 
-# Call AOSPAL device
-$(call inherit-product, vendor/aospal/products/aospal_hammerhead.mk)
+# Call SaberDroid device
+$(call inherit-product, vendor/sd/products/sd_hammerhead.mk)
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := aospal_hammerhead
+PRODUCT_NAME := sd_hammerhead
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE
