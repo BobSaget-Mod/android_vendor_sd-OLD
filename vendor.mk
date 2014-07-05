@@ -1,8 +1,8 @@
 # Export rom name
-export VENDOR := aospal
+export VENDOR := sd
 
-# AOSPAL version info
-AOSPAL_VERSION_MAJOR := 0
-AOSPAL_VERSION_MINOR := 1
-AOSPAL_VERSION_MAINTENANCE := ALPHA
-AOSPAL_TYPE := AOSPSM
+# SaberDroid version info
+SD_VERSION_MAJOR := 0
+SD_VERSION_MINOR := 1
+SD_VERSION_MAINTENANCE := ALPHA
+SD_TYPE :=
