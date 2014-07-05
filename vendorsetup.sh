@@ -1,13 +1,11 @@
-add_lunch_combo psd_deb-userdebug
-add_lunch_combo psd_grouper-userdebug
-add_lunch_combo psd_flo-userdebug
-add_lunch_combo psd_hammerhead-userdebug
-add_lunch_combo psd_tilapia-userdebug
-add_lunch_combo psd_mako-userdebug
-add_lunch_combo psd_manta-userdebug
-add_lunch_combo psd_maguro-userdebug
-add_lunch_combo psd_toro-userdebug
-add_lunch_combo psd_toroplus-userdebug
+# Deodex
+add_lunch_combo aospal_flo-userdebug
+add_lunch_combo aospal_grouper-userdebug
+add_lunch_combo aospal_hammerhead-userdebug
+add_lunch_combo aospal_mako-userdebug
 
-# Add the lunch combo here if someone wants odex
-add_lunch_combo psd_hammerhead-user
+# Odex
+add_lunch_combo aospal_flo-user
+add_lunch_combo aospal_grouper-user
+add_lunch_combo aospal_hammerhead-user
+add_lunch_combo aospal_mako-user
