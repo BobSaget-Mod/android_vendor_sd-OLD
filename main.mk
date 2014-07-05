@@ -1,4 +1,4 @@
-# Copyright (C) 2014 AOSPAL
+# Copyright (C) 2014 AOSPAL & SaberMod
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/aospal/configs/aospal_board.mk
-include vendor/aospal/vendor.mk
-include vendor/aospal/configs/aospal_overrides.mk
-include vendor/aospal/configs/version.mk
+include vendor/sd/configs/sd_board.mk
+include vendor/sd/vendor.mk
+include vendor/sd/configs/sd_overrides.mk
+include vendor/sd/configs/version.mk
