@@ -1,5 +1,5 @@
-ifeq (aospal_mako,$(TARGET_PRODUCT))
-include vendor/aospal/configs/aospal_modular.mk
+ifeq (sd_mako,$(TARGET_PRODUCT))
+include vendor/sd/configs/sd_modular.mk
 
 # Optimize memory
 OPT_MEMORY := true
@@ -13,17 +13,17 @@ USING_SABER_LINUX := yes
 # Set -fstrict-aliasing flag to global for mako (for real this time)
 MAKE_STRICT_GLOBAL := true
 
-# Include AOSPAL common configuration
-include vendor/aospal/main.mk
+# Include SaberDroid common configuration
+include vendor/sd/main.mk
 
-# Call AOSPAL device
-$(call inherit-product, vendor/aospal/products/aospal_mako.mk)
+# Call Saberdroid device
+$(call inherit-product, vendor/sd/products/sd_mako.mk)
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/mako/full_mako.mk)
 
 # Override AOSP build properties
-PRODUCT_NAME := aospal_mako
+PRODUCT_NAME := sd_mako
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Nexus 4
 PRODUCT_MANUFACTURER := LGE
