@@ -49,19 +49,13 @@ OPT_MEMORY := true
 # Enable graphite
 ENABLE_GRAPHITE := true
 
-# Saber linux toolchains
-USING_SABER_LINUX := yes
-
-# Set -fstrict-aliasing flag to global for hammerhead (for real this time)
+# Set -fstrict-aliasing flag to global for hammerhead
 MAKE_STRICT_GLOBAL := true
 
 # Loading modules are sometimes needed for bug fixes in the kernel, but we need to load them with ROM scripts
 PRODUCT_COPY_FILES += \
 	vendor/sd/prebuilt/device/hammerhead/etc/init.d/88LoadMod:system/etc/init.d/88LoadMod \
 	vendor/sd/prebuilt/device/hammerhead/etc/init.d/89InsMod:system/etc/init.d/89InsMod
-
-# Call SaberDroid device
-$(call inherit-product, vendor/sd/products/sd_hammerhead.mk)
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
