@@ -24,7 +24,6 @@
 # 
 
 # begin pthread support
-# Enabled by default when "USING_SABER_LINUX := yes" is used.
 # Bug fix for saber linux ART and other modules that may need it.
 # Use when having building errors related to "pthread".
 # The last "error" in the build will tell you which module has an issue by having a name *****_intermidates.
@@ -34,7 +33,7 @@ THREAD_FLAGS := -pthread
 # end pthread support
 
 # begin graphite support
-# Enabled by default when "ENABLE_GRAPHITE := true" + "USING_SABER_LINUX := yes" are both used.
+# Enabled by default when "ENABLE_GRAPHITE := true" is both used.
 # ADD more modules here if needed.
 # Examples of graphite needing to be disabled is if the build fails with a internal compiler error.
 # The last "error" in the build will tell you which module has an issue by having a name *****_intermidates.
@@ -130,5 +129,37 @@ STRICT_FLAGS := -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing
 # uncommented for now since there's no common warnings
 # NO_ERROR_UP :=
 # end unused-parameter waring fix
+
+## begin unused-arguments fix
+# Silence compiler warnings for unused-arguments
+NO_ERROR_UA := \
+	libclangARCMigrate \
+	libclangAST \
+	libclangAnalysis \
+	libclangBasic \
+	libclangCodeGen \
+	libclangDriver \
+	libclangEdit \
+	libclangFrontend \
+	libclangFrontendTool \
+	libclangLex \
+	libclangParse \
+	libclangRewriteFrontend \
+	libclangSema \
+	libclangSerialization \
+	libclangStaticAnalyzerCheckers \
+	libclangStaticAnalyzerCore \
+	libclangStaticAnalyzerFrontend \
+	clang \
+	clang-tblgen \
+	libRSDriver \
+	libRScpp \
+	libRSCpuRef \
+	rstest-cppallocation \
+	rstest-compute \
+	rstest-cppstrided \
+	rstest-latency
+
+## end unused-arguments fix
 
 # end generic MODULAR customizations
