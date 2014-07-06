@@ -70,6 +70,7 @@ DISABLE_STRICT_MODULES := \
 	libslang \
 	llvm-rs-cc \
 	ping \
+	ping6 \
 	libaudioflinger \
 	libmediaplayerservice \
 	libstagefright \
@@ -81,7 +82,9 @@ DISABLE_STRICT_MODULES := \
 	libdownmix \
 	libvisualizer \
 	libuclibcrpc \
-	libcrypto_static
+	libcrypto_static \
+	libc_common \
+	libandroid_runtime
 
 # CLANG
 DISABLE_STRICT_CLANG := \
@@ -127,7 +130,7 @@ STRICT_FLAGS := -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing
 # This is a example of a unused-parameter error
 # error: unused parameter 'len' [-Werror=unused-parameter]
 # uncommented for now since there's no common warnings
-# NO_ERROR_UP :=
+NO_ERROR_UP := libcorkscrew
 # end unused-parameter waring fix
 
 ## begin unused-arguments fix

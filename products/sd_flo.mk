@@ -26,17 +26,9 @@ endif
 
 include vendor/sd/configs/sd_modular.mk
 
-#Disable strict aliasing modules
-DISABLE_STRICT_WEBKIT := \
-        third_party_WebKit_Source_platform_blink_platform_gyp
-
-DISABLE_STRICT_QCOM := \
-        mm-vdec-omx-test
-        
 # Add other categories to common list to pass onto build repo
 DISABLE_STRICT_MODULES += \
-		$(DISABLE_STRICT_WEBKIT) \
-		$(DISABLE_STRICT_QCOM)
+	mm-vdec-omx-test
 
 # Set -fstrict-aliasing flag to global for flo
 MAKE_STRICT_GLOBAL := true
@@ -49,9 +41,6 @@ USING_SABER_LINUX := yes
 
 # Include Saberdroid common configuration
 include vendor/sd/main.mk
-
-# Call SaberDroid device
-$(call inherit-product, vendor/sd/products/sd_flo.mk)
 
 # Inherit AOSP device configuration
 $(call inherit-product, device/asus/flo/full_flo.mk)

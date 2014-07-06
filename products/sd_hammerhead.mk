@@ -33,7 +33,7 @@ DISABLE_STRICT_QCOM := \
 DISABLE_STRICT_MODULES += \
 	$(DISABLE_STRICT_QCOM)
 
-NO_ERROR_UP := \
+NO_ERROR_UP += \
 	liboverlay \
 	mm-jpeg-interface-test \
 	gralloc.msm8974 \

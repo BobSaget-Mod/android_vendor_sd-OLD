@@ -16,9 +16,6 @@ MAKE_STRICT_GLOBAL := true
 # Include SaberDroid common configuration
 include vendor/sd/main.mk
 
-# Call Saberdroid device
-$(call inherit-product, vendor/sd/products/sd_mako.mk)
-
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/mako/full_mako.mk)
 

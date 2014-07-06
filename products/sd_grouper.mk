@@ -14,9 +14,6 @@ USING_SABER_LINUX := yes
 # Include SaberDroid common configuration
 include vendor/sd/main.mk
 
-# Call SaberDroid device
-$(call inherit-product, vendor/sd/products/sd_grouper.mk)
-
 # Inherit AOSP device configuration
 $(call inherit-product, device/asus/grouper/full_grouper.mk)
 
