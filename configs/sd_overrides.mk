@@ -26,11 +26,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    ScreenRecorder \
-    libscreenrecorder
+    audio_effects.conf
 
 # Kernel modules support
 PRODUCT_COPY_FILES += \
