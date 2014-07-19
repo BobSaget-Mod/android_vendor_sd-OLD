@@ -1,5 +1,4 @@
-# Copyright (C) 2014 AOSPAL
-# Copyright (C) 2014 SaberMod
+# Common SaberDroid configs
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,12 +25,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
-    audio_effects.conf \
-    ScreenRecorder \
-    libscreenrecorder
+    audio_effects.conf
 
-# Kernel modules support
+# Write all buffered filesystems to disk on boot
 PRODUCT_COPY_FILES += \
-    vendor/sd/prebuilt/etc/init.d/999Sync:system/etc/init.d/999Sync
+    vendor/sd/prebuilt/common/etc/init.d/999Sync:system/etc/init.d/999Sync
+
+# sysinit for init.d support
+PRODUCT_COPY_FILES += \
+    vendor/sd/prebuilt/common/bin/sysinit:system/bin/sysinit

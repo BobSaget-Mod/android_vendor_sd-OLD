@@ -14,5 +14,5 @@
 
 include vendor/sd/configs/sd_board.mk
 include vendor/sd/vendor.mk
-include vendor/sd/configs/sd_overrides.mk
+include vendor/sd/configs/sd_common.mk
 include vendor/sd/configs/version.mk
