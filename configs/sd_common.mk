@@ -25,7 +25,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    audio_effects.conf
+    audio_effects.conf \
+    busybox
 
 # Write all buffered filesystems to disk on boot
 PRODUCT_COPY_FILES += \
@@ -33,4 +34,5 @@ PRODUCT_COPY_FILES += \
 
 # sysinit for init.d support
 PRODUCT_COPY_FILES += \
-    vendor/sd/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/sd/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/sd/prebuilt/common/etc/init.sd.rc:root/init.sd.rc
