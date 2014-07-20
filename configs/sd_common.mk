@@ -1,4 +1,7 @@
 # Common SaberDroid configs
+
+#
+#      Copyright (C) 2014 AOSPAL & SaberMod
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,6 +30,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     audio_effects.conf \
     busybox \
+    Superuser \
     su
 
 SUPERUSER_EMBEDDED := true
