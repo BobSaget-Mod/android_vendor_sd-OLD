@@ -127,7 +127,9 @@ STRICT_FLAGS := -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing
 # This is a example of a unused-parameter error
 # error: unused parameter 'len' [-Werror=unused-parameter]
 # uncommented for now since there's no common warnings
-# NO_ERROR_UP :=
+NO_ERROR_UP := \
+	libbt-brcm_gki \
+	bluetooth.default
 # end unused-parameter waring fix
 
 ## begin unused-arguments fix
@@ -159,6 +161,7 @@ NO_ERROR_UA := \
 	rstest-compute \
 	rstest-cppstrided \
 	rstest-latency
+	
 
 ## end unused-arguments fix
 

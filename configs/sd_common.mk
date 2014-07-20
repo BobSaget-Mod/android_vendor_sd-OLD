@@ -22,9 +22,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     BUILD_UTC_DATE=$(shell date +"%s")
 
-# Enable ADB authentication
+# Overrides
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=1
+    ro.adb.secure=1 \
+    persist.sys.root_access=3 \
+    ro.build.selinux=1
 
 # Extra packages
 PRODUCT_PACKAGES += \
