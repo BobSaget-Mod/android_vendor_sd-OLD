@@ -26,7 +26,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Extra packages
 PRODUCT_PACKAGES += \
     audio_effects.conf \
-    busybox
+    busybox \
+    su
+
+SUPERUSER_EMBEDDED := true
 
 # Write all buffered filesystems to disk on boot
 PRODUCT_COPY_FILES += \
