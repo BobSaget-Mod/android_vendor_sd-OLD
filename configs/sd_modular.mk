@@ -130,7 +130,7 @@ STRICT_FLAGS := -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing
 NO_ERROR_UP := \
 	libbt-brcm_gki \
 	bluetooth.default
-# end unused-parameter waring fix
+# end unused-parameter warning fix
 
 ## begin unused-arguments fix
 # Silence compiler warnings for unused-arguments
