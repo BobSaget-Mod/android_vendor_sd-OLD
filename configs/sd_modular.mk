@@ -33,12 +33,12 @@ THREAD_FLAGS := -pthread
 # end pthread support
 
 # begin graphite support
-# Enabled by default when "ENABLE_GRAPHITE := true" is both used.
+# Enabled by default when "ENABLE_GRAPHITE := true" is used.
 # ADD more modules here if needed.
 # Examples of graphite needing to be disabled is if the build fails with a internal compiler error.
 # The last "error" in the build will tell you which module has an issue by having a name *****_intermidates.
 # Here will be the module name excluding "_intermidates".
-DISABLE_GRAPHITE_MODULES := \
+DISABLE_GRAPHITE := \
 	libstagefright_amrwbenc \
 	libFFTEm \
 	libwebviewchromium \
@@ -46,6 +46,8 @@ DISABLE_GRAPHITE_MODULES := \
 	libjni_filtershow_filters \
 	libwebrtc_spl \
 	mdnsd
+
+GRAPHITE_FLAGS := -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
 # end graphite support
 
 # begin strict-aliasing
