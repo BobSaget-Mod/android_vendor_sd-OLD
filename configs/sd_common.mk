@@ -32,6 +32,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     audio_effects.conf \
     busybox \
+    Superuser \
     su
 
 SUPERUSER_EMBEDDED := true
