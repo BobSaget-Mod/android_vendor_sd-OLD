@@ -163,7 +163,8 @@ NO_ERROR_UA := \
 	rstest-compute \
 	rstest-cppstrided \
 	rstest-latency
-	
+
+DISABLE_GNU11 := libLLVMSelectionDAG
 
 ## end unused-arguments fix
 
