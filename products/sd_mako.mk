@@ -4,15 +4,6 @@ include vendor/sd/configs/sd_modular.mk
 # Optimize memory
 OPT_MEMORY := true
 
-# Enable graphite
-ENABLE_GRAPHITE := true
-
-# Saber linux toolchains
-USING_SABER_LINUX := yes
-
-# Set -fstrict-aliasing flag to global for mako (for real this time)
-MAKE_STRICT_GLOBAL := true
-
 # Include SaberDroid common configuration
 include vendor/sd/main.mk
 

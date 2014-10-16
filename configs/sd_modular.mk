@@ -38,131 +38,26 @@ THREAD_FLAGS := -pthread
 # Examples of graphite needing to be disabled is if the build fails with a internal compiler error.
 # The last "error" in the build will tell you which module has an issue by having a name *****_intermidates.
 # Here will be the module name excluding "_intermidates".
+
 DISABLE_GRAPHITE := \
-	libstagefright_amrwbenc \
-	libFFTEm \
-	libwebviewchromium \
-	libstagefright_mp3dec \
-	libjni_filtershow_filters \
-	libwebrtc_spl \
-	mdnsd
+       libstagefright_amrwbenc \
+       libFFTEm \
+       libwebviewchromium \
+       libstagefright_mp3dec \
+       libjni_filtershow_filters \
+       libwebrtc_spl \
+       mdnsd
 
 GRAPHITE_FLAGS := -fgraphite -floop-flatten -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block
 # end graphite support
 
-# begin strict-aliasing
-# Enabled by default when "MAKE_STRICT_GLOBAL := true" is used.
-# ADD more modules here only if needed to the appropriate category.
-# If it's device specific create a new category if there's not one present.
-# Examples of strict needing to be disabled is if the build fails with a lot of errors saying strict-aliasing rules are being broken.
-# The last "error" in the build will tell you which module has an issue by having a name *****_intermidates.
-# Here will be the module name excluding "_intermidates".
-
-# Common module list
-DISABLE_STRICT_MODULES := \
-	base_base_gyp \
-	busybox \
-	e2fsck \
-	e2fsck_host \
-	libcrypto-host \
-	libwnndict \
-	libdvm \
-	libmedia \
-	mdnsd \
-	libslang \
-	llvm-rs-cc \
-	ping \
-	libaudioflinger \
-	libmediaplayerservice \
-	libstagefright \
-	libsurfaceflinger \
-	libfdlibm \
-	libcyanogen-dsp \
-	librtp_jni \
-	libldnhncr \
-	libdownmix \
-	libvisualizer \
-	libuclibcrpc \
-	libcrypto_static
-
-# CLANG
-DISABLE_STRICT_CLANG := \
-	libclangFrontend \
-	libclangARCMigrate \
-	libclangSerialization \
-	libclangCodeGen \
-	libclangRewriteFrontend \
-	libclangParse \
-	libclangRewriteCore \
-	libclangSema \
-	libclangStaticAnalyzerFrontend \
-	libclangStaticAnalyzerCheckers \
-	libclangStaticAnalyzerCore \
-	libclangAnalysis \
-	libclangEdit \
-	libclangAST
-# WebKit
-DISABLE_STRICT_WEBKIT := \
-	third_party_WebKit_Source_core_webcore_platform_gyp \
-	third_party_WebKit_Source_core_webcore_remaining_gyp \
-	third_party_WebKit_Source_core_webcore_derived_gyp \
-	third_party_WebKit_Source_platform_blink_platform_gyp
-
-# ext fs
-DISABLE_STRICT_EXT := \
-	libext2_blkid \
-	libext2_blkid_host
-
-# Add the other categories last
-DISABLE_STRICT_MODULES += \
-	$(DISABLE_STRICT_CLANG) \
-	$(DISABLE_STRICT_QCOM) \
-	$(DISABLE_STRICT_EXT) \
-	$(DISABLE_STRICT_WEBKIT)
-
-# Use the highest level of warning and turn all warnings into errors.
-# This ensures that strict is not allowed to break any code in the source.
-STRICT_FLAGS := -fstrict-aliasing -Wstrict-aliasing=3 -Werror=strict-aliasing
-# end strict-aliasing
-
 # begin unused-parameter warning fix
 # This is a example of a unused-parameter error
 # error: unused parameter 'len' [-Werror=unused-parameter]
-# uncommented for now since there's no common warnings
 NO_ERROR_UP := \
 	libbt-brcm_gki \
 	bluetooth.default
 # end unused-parameter warning fix
-
-## begin unused-arguments fix
-# Silence compiler warnings for unused-arguments
-NO_ERROR_UA := \
-	libclangARCMigrate \
-	libclangAST \
-	libclangAnalysis \
-	libclangBasic \
-	libclangCodeGen \
-	libclangDriver \
-	libclangEdit \
-	libclangFrontend \
-	libclangFrontendTool \
-	libclangLex \
-	libclangParse \
-	libclangRewriteFrontend \
-	libclangSema \
-	libclangSerialization \
-	libclangStaticAnalyzerCheckers \
-	libclangStaticAnalyzerCore \
-	libclangStaticAnalyzerFrontend \
-	clang \
-	clang-tblgen \
-	libRSDriver \
-	libRScpp \
-	libRSCpuRef \
-	rstest-cppallocation \
-	rstest-compute \
-	rstest-cppstrided \
-	rstest-latency
 
 DISABLE_GNU11 := libLLVMSelectionDAG
 

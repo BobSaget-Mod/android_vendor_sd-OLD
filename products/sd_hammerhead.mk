@@ -26,13 +26,6 @@ endif
 
 include vendor/sd/configs/sd_modular.mk
 
-# qcom
-DISABLE_STRICT_QCOM := \
-	libqcomvisualizer
-
-DISABLE_STRICT_MODULES += \
-	$(DISABLE_STRICT_QCOM)
-
 NO_ERROR_UP += \
 	liboverlay \
 	mm-jpeg-interface-test \
@@ -45,12 +38,6 @@ include vendor/sd/main.mk
 
 # Optimize memory
 OPT_MEMORY := true
-
-# Enable graphite
-ENABLE_GRAPHITE := true
-
-# Set -fstrict-aliasing flag to global for hammerhead
-MAKE_STRICT_GLOBAL := true
 
 # Loading modules are sometimes needed for bug fixes in the kernel, but we need to load them with ROM scripts
 PRODUCT_COPY_FILES += \
