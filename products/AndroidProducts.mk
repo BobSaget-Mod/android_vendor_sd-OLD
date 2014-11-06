@@ -17,6 +17,9 @@
 ifeq (sd_flo,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_flo.mk
 endif
+ifeq (sd_flounder,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_flounder.mk
+endif
 ifeq (sd_grouper,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_grouper.mk
 endif
@@ -25,4 +28,10 @@ ifeq (sd_hammerhead,$(TARGET_PRODUCT))
 endif
 ifeq (sd_mako,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_mako.mk
+endif
+ifeq (sd_manta,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_manta.mk
+endif
+ifeq (sd_shamu,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_shamu.mk
 endif

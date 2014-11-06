@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Created by Michael S Corigliano for Team AOSPAL (michael.s.corigliano@gmail.com)
+# Created by Michael S Corigliano for The SaberMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -72,23 +72,6 @@ DEVICE="$1"
    echo -e "Setting up build environment..."
    . build/envsetup.sh
    clear
-
-# decide to build odex or deodex
-   echo -e "";
-   echo -e "";
-   echo "Build odex or deodex:
-         1) odex
-         2) deodex"
-      read n
-         case $n in
-            1) lunch sd_$DEVICE-user
-               ;;
-            2) lunch sd_$DEVICE-userdebug
-               ;;
-            *) invalid option
-               ;;
-         esac
-         clear
  
 # execute the build while sending a log to 'build-logs'
    echo -e "Starting build...";
